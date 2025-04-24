@@ -1,0 +1,19 @@
+html {
+    scroll-behavior: smooth !important;
+}
+#profile-picture {
+    border-radius: 50%;
+    width: 20%;
+    height: auto;
+}
+#top-content {
+    background-color: rgb(184, 158, 206);
+}
+#profile-picture-container {
+    display: flex;
+    justify-content: center;
+}
+#intro-text {
+    justify-content: center;
+    display: flex;
+}
