@@ -1,5 +1,7 @@
 html, body {
     scroll-behavior: smooth !important;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -14,13 +16,14 @@ html, body {
 #top-bar {
     background-color: blueviolet;
     height: 30px;
+    width: 100%;
+    flex-shrink: 0;
 }
 #main-top {
     margin-top: 2.5rem;
     background-color: none;
     display: flex;
     justify-content: center;
-    height: 80%;
 }
 #top-content {
     background-color: none;
@@ -32,7 +35,6 @@ html, body {
 #top-content-nav {
     align-items: center;
     display: flex;
-    font-weight: 800;
     font-size: 30px;
 }
 #ds-logo {
@@ -58,7 +60,6 @@ html, body {
     border-color: black;
     padding: 1%;
     color: black;
-    transition: font-size 0.3s ease, opacity 0.3s ease;
 }
 #intro {
     display: flex;
@@ -66,11 +67,13 @@ html, body {
     justify-content: center;
     flex-direction: column;
     flex-grow: 1;
+    margin-bottom: 2rem;
 }
 #profile-picture-container {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 4rem;
 }
 #profile-picture {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
@@ -84,12 +87,24 @@ html, body {
 #intro-text {
     justify-content: center;
     display: flex;
-    font-weight: 800;
     font-size: 40px;
     margin: 2.5rem;
 }
 #intro-text span {
     color: blueviolet;
+}
+
+/* projects content */
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    width: 100%;
+}
+#projects-header {
+    font-size: 30px;
 }
 
 /* media queries */
@@ -98,7 +113,7 @@ html, body {
         font-size: 25px;
     }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     #top-content-nav {
         font-size: 20px;
     }
@@ -116,6 +131,9 @@ html, body {
 }
 
 /* utility classes */
+.extra-bold {
+    font-weight: 800;
+}
 .smooth-text-transition {
     transition: font-size 0.3s ease;
 }
