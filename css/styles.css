@@ -7,20 +7,23 @@ html, body {
     height: 100%;
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
 /* navbar when scrolling */
 #nav-on-scroll {
     display: none;
 }
 
+
+
 /* top content of the page */
 #top-bar {
-    background-color: blueviolet;
-    height: 30px;
+    background-color: rgb(43, 181, 128);
+    height: 1.6rem;
     width: 100%;
     flex-shrink: 0;
 }
 #main-top {
-    margin-top: 2.5rem;
+    margin-top: 5rem;
     background-color: none;
     display: flex;
     justify-content: center;
@@ -30,19 +33,19 @@ html, body {
     flex-direction: column;
     display: flex;
     height: 100%;
-    width: 60%;
+    width: 67%;
 }
 #top-content-nav {
     align-items: center;
     display: flex;
-    font-size: 30px;
+    font-size: 1.7rem;
 }
 #ds-logo {
     border-style: solid;
     border-color: black;
-    border-width: 4px;
-    border-radius: 7px;
-    padding: 1%;
+    border-width: .25rem;
+    border-radius: .5rem;
+    padding: .5rem;
     text-decoration: none;
     color: black;
     margin-right: 1rem;
@@ -52,14 +55,26 @@ html, body {
     text-decoration: none;
     color: black;
 }
+#ds-logo:hover {
+    box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.1), 0 .4rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+}
+.top-content-nav-links:hover {
+    text-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1), 0 .4rem 1.25rem rgba(0, 0, 0, 0.1);
+}
 #top-content-nav span {
     margin-left: auto;
     border-style: solid;
-    border-width: 4px;
-    border-radius: 7px;
-    border-color: black;
-    padding: 1%;
-    color: black;
+    border-width: .25rem;
+    border-radius: .5rem;
+    border-color: rgb(17, 24, 39);
+    padding: .5rem;
+    color: rgb(17, 24, 39)ck;
+}
+#top-content-nav span:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(17, 24, 39);
+    box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.2), 0 .4rem 1.25rem 0 rgba(0, 0, 0, 0.2);
 }
 #intro {
     display: flex;
@@ -76,22 +91,60 @@ html, body {
     margin-top: 4rem;
 }
 #profile-picture {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
     border-style: solid;
-    border-width: 7px;
-    border-color: black;
+    border-width: .45rem;
+    border-color: rgb(17, 24, 39);
+    color: rgb(17, 24, 39);
     border-radius: 50%;
-    min-width: 350px;
-    max-width: 350px;
+    min-width: 22rem;
+    max-width: 22rem;
+}
+#profile-picture:hover {
+    cursor: pointer;
+    border-style: solid;
+    border-width: .45rem;
+    border-color: rgb(43, 181, 128);
+    border-radius: 50%;
 }
 #intro-text {
     justify-content: center;
     display: flex;
-    font-size: 40px;
+    color: rgb(17, 24, 39);
+    font-size: 2.5rem;
     margin: 2.5rem;
 }
 #intro-text span {
-    color: blueviolet;
+    color: rgb(43, 181, 128);
+}
+
+/* feature content */
+#featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(17, 24, 39);
+    width: 100%;
+}
+#featured-content {
+    margin: 5rem;
+}
+#featured-header {
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    width: 100%;
+}
+#featured-picture-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4rem;
+}
+#featured-picture {
+    border-radius: .5rem;
+    width: 70%;
+    
 }
 
 /* projects content */
@@ -100,22 +153,100 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
+    background-color: white;
     width: 100%;
 }
-#projects-header {
-    font-size: 30px;
+#projects-content {
+    margin: 5rem;
+    height: 100%;
 }
+#projects-header {
+    color: rgb(17, 24, 39);
+    text-align: center;
+    font-size: 4rem;
+    width: 100%;
+}
+
+#flip-card-1 {
+    display: inline-block;
+    margin: 5rem;
+    width: 19rem;
+    height: 19rem;
+    perspective: 125rem;
+}
+#flip-card-1-front {
+    background-color: rgb(17, 24, 39);
+    border-radius: .8rem;
+}
+#flip-card-1-back {
+    background-color: red;
+    transform: rotateY(180deg);
+    border-radius: .8rem;
+}
+
+#flip-card-2 {
+    display: inline-block;
+    margin: 5rem;
+    width: 19rem;
+    height: 19rem;
+    perspective: 125rem;
+    
+}
+#flip-card-2-front {
+    background-color: rgb(17, 24, 39);
+    border-radius: .8rem;
+}
+#flip-card-2-back {
+    background-color: beige;
+    transform: rotateY(180deg);
+    border-radius: .8rem;
+}
+
+/* flip card utility classes */
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transition: transform 1s;
+    box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.1), 0 .4rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: .8rem;
+}
+.flip-card.is-flipped {
+    transform: rotateY(180deg);
+}
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 260px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    backface-visibility: hidden;
+  }
 
 /* media queries */
 @media only screen and (max-width: 1200px) {
+    #main-top {
+        margin-top: 2rem;
+    }
+    #top-content {
+        width: 80%;
+    }
     #top-content-nav {
-        font-size: 25px;
+        font-size: 1.5rem;
     }
 }
 @media only screen and (max-width: 1000px) {
+    #top-content {
+        width: 90%;
+    }
     #top-content-nav {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -126,13 +257,19 @@ html, body {
         min-width: 0;
     }
     #intro-text {
-        font-size: 30px;
+        font-size: 1.9rem;
+    }
+    #projects-header {
+        font-size: 2rem;
     }
 }
 
 /* utility classes */
 .extra-bold {
     font-weight: 800;
+}
+.box-shadow {
+    box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.1), 0 .4rem 1.25rem 0 rgba(0, 0, 0, 0.1);
 }
 .smooth-text-transition {
     transition: font-size 0.3s ease;
