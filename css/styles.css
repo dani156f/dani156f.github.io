@@ -13,6 +13,8 @@ html, body {
 /* navbar when scrolling */
 #nav-on-scroll {
     display: none;
+    position: sticky;
+    top: 0;
 }
 
 
